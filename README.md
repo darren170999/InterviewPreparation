@@ -22,7 +22,7 @@ Notes and Questions attempted on LeetCode
     n = 4
     n = None
     print("n =", n)
->>> n = None
+    >>> n = None
 # If statements don't need parentheses 
 # or curly braces.
     n = 1

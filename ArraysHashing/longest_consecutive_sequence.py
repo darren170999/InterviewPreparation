@@ -4,12 +4,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        nums.sort()
-        ls = [1]
-        max_length = 1
         n = len(nums)
         if(n==0):
             return 0
+        nums.sort()
+        ls = [1]
+        max_length = 1
         for i in range(0, n-1):
             j = nums[i]
             if (nums[i+1] - j == 1):

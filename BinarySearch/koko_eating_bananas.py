@@ -7,6 +7,10 @@ class Solution(object):
         :type h: int
         :rtype: int
         """
+        if len(piles) == h:
+            return max(piles)
+        if sum(piles) < h:
+            return 1
         k_min = math.ceil(sum(piles) / h)
         k_max = max(piles)
         ans = k_max
@@ -15,7 +19,10 @@ class Solution(object):
             k = l + (r - l) // 2
             hours = 0
             for pile in piles:
-                hours += math.ceil(pile / k)
+                if k != 0:
+                    hours += math.ceil(pile / k)
+                else:
+                    hours += 1
             if hours <= h:
                 r = k
                 ans = min(k, ans)

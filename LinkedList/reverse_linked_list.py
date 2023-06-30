@@ -9,7 +9,7 @@ class Solution(object):
         else:
             curr = head
             prev = None
-            while(curr is not None):
+            while(curr is not None): # reversing portion of ll
                 temp = curr.next
                 curr.next = prev
                 prev = curr

@@ -3,6 +3,7 @@
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+# Reorder list is a mix of reverse ll, merge two ll, cycle ll
 class Solution:
     def reorderList(self, head: ListNode) -> None:
         # find middle, use slow fast pointers

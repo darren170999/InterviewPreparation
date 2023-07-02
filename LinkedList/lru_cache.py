@@ -1,3 +1,14 @@
+# LRUCache init -> gives Capacity
+# if Cap exceeded, we want to remove LRU
+# Thus, important to maintain order of items used.
+# Doubly Linked List should be used here to maintain the order
+# Left is LRU right is Most recently used
+# new nodes put are considered to be most recently used
+# back to back puts will push the existing order left
+# HashMap is needed because we want constant lookup time
+# Size of Hashmap == capacity
+# HashMap holds key and pointer to node
+
 class Node:
     def __init__(self, key, val):
         self.key, self.val = key, val

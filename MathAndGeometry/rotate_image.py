@@ -9,5 +9,5 @@ class Solution:
                 temp = matrix[i][j]
                 matrix[i][j] = matrix[j][i]
                 matrix[j][i] = temp
-        for p in matrix:
+        for p in matrix: # flip 
             p.reverse()

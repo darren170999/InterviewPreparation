@@ -3,7 +3,7 @@ class Solution:
         ans = []
         # return clause
         if len(nums) == 1:
-            return [nums.copy()]
+            return [nums.copy()] # or [nums[:]]
         for i in range(len(nums)):
             n = nums.pop(0)
             perms = self.permute(nums)

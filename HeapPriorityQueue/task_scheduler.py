@@ -40,7 +40,13 @@
 #         return time       
 from collections import deque
 import heapq
-
+        #MaxHeap is used to keep track of the count of each letter.
+        # the letters themselves are not important
+        # Queue is used to decide which task to schedule
+        # Every count is first added to heap 
+        # then when a letter is tasked, pop it from heap and decrement the count
+        # add it to queue with its next available timing
+        # repeat until all counts are 0 and track time 
 class Solution:
     def leastInterval(self, tasks: List[str], n: int) -> int:
         queue = deque()  # will keep track of next avail for that task

@@ -12,7 +12,7 @@ class Solution:
             curMin = min(n, tmp, n*curMin)
             ans = max(ans, curMax)
         return ans
-        # n = len(nums)
+        # n = len(nums)     
         # ans = min(nums)
         # def mul(ls: List[int]):
         #     total = 1

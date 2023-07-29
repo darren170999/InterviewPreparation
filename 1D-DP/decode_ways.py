@@ -12,7 +12,8 @@ class Solution:
             # case where i take one number
             res = dfs(index + 1)
             # case where I take two numbers
-            if index < n-1 and (s[index] == "1" or s[index] == "2" and s[index+1] in "0123456" ):
+            if index < n-1 and (s[index] == "1" or s[index] == "2" 
+            and s[index+1] in "0123456" ):
                 res += dfs(index+2)
             cache[index] = res
             return res

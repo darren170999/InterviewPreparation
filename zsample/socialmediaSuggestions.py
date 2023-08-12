@@ -38,3 +38,20 @@ def solution(n, connections):
     return r
 
 print(solution(5, [[0, 1], [0, 2], [1, 3], [2, 3], [3, 4]]))
+# --------------------------------------------------------------
+adj=[set() for _ in range(n)]
+dp=[[[-1,1],Counter()] for _ in range(n)]
+
+for i,j in connections:
+    adj[j].add(i)
+    adj[i].add(j)
+          
+for i,j in connections+[[w,v] for v,w in connections]:
+    for k in adj[j]:
+        if k!=i and k not in adj[i]:
+           dp[i][1][k]+=1
+           dp[k][1][i]+=1
+           dp[i][0]=max([dp[i][1][k],-k],dp[i][0])
+           dp[k][0]=max([dp[k][1][i],-i],dp[k][0])
+                                    
+return [-dp[i][0][1] for i in range(n)]

@@ -1,0 +1,26 @@
+There is a line chart consisting of N points (numbered from 0 to N-1) connected by line segments. The K-th point has coordinates x = K, y = Y(K]. There are no horizontal lines; that is, no two consecutive points has the same y-coordinate. We can draw an infinitely long horizontal line. What is the maximum number of points of intersection of the line with the chart?
+
+Write a function:
+
+int solution (vectorcint› &V);
+
+that, given array Y, returns the maximum number of common points between the horizontal line and our line chart if we draw the line optimally.
+
+Examples:
+
+Given Y = [1, 2, 1, 2, 1, 3, 2], the function should retum 5. A
+horizontal line at y = 1.5 intersects the chart at points (0.5,
+1.5), (1.5, 1.5). (2.5, 1.5). (3.5, 1.5) and (4.25, 1.5).
+
+Given Y = [2, 1, 2, 1, 2, 3, 2, 3, 2], the function should retum 5.
+The optimal way to draw a line is at y = 2.
+
+Given Y = [1000001, 1000000, 1000002, 1000001], the
+function should return 3.
+
+Given Y = [2, 1, 3, 4, 5, 6, 71, the function should retum 2.
+
+Write an efficient algorithm for the following assumptions:
+• each element of array Y is an integer within the range [1...1,000,000,000);
+N is an integer within the range (2..100,000);
+• every two consecutive elements in Y have different values.

@@ -1,6 +1,5 @@
 
 class Solution:
-    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         # numcourses tells you how many unique courses u have to take
         # use adjacency list data structure which is represented by hashmap
         # crs | pre. if you can clear out the pre to [] then u can complete it
@@ -10,6 +9,7 @@ class Solution:
         # 3 | [4]
         # 4 | []
         # maps each course to prereq list
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
         preMap = {i: [] for i in range(numCourses)}
         for crs, pre in prerequisites:
             preMap[crs].append(pre)
